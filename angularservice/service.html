@@ -1,0 +1,18 @@
+<html lang="en" ng-app="serviceview">
+    <head>
+         <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+        <script src="service.js"></script>
+		<script src="github.js"></script>
+        <meta charset="utf-8">
+    </head>
+    <body ng-controller="ServiceCtrl">
+        <div>
+			{{ countdown }}
+            <form>
+                <input type="search" placeholder="Enter user name" ng-model="username">
+                <input type="submit" value="Search" ng-click="search(username)"/>
+            </form>
+            <div ng-include="'userdetails.html'" ng-show="user"></div>    
+        </div>
+    </body>
+</html>
